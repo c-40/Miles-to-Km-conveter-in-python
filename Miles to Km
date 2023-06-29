@@ -1,0 +1,36 @@
+import tkinter
+top = tkinter.Tk()
+top.title('Miles to Kms')
+top.config(padx=20,pady=20)
+def submit():
+    miles=input.get()
+    km=int(miles)*1.609
+    my_lable2.config(text=km)
+
+
+
+
+
+
+
+
+input=tkinter.Entry(width=5)
+input.grid(column=1,row=0)
+
+my_lable=tkinter.Label(text="Miles")
+my_lable.grid(column=2,row=0)
+
+my_lable1=tkinter.Label(text="is equal to")
+my_lable1.grid(column=0,row=1)
+
+my_lable2=tkinter.Label(text="0 ")
+my_lable2.grid(column=1,row=1)
+
+my_lable4 = tkinter.Label(text="Km")
+my_lable4.grid(column=2, row=1)
+
+button=tkinter.Button(text="Calculate",command=submit)
+button.grid(column=1,row=2)
+
+
+top.mainloop()
